@@ -6,9 +6,11 @@
 
 :root {
     --primary-color: #fcf5e9;
+    --dark-color: #333;
     --container-normal: 1100px;
     --container-wide: 1400px;
     --container-narrow: 900px;
+    
 }
 
 body {
@@ -32,7 +34,42 @@ img {
 /* Utility Classes */
 .bg-primary {
     background: var(--primary-color);
+    color: #333;
 
+}
+
+.bg-dark {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.bg-dark .bg-primary {
+    padding: 0 0.3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #333;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 /* Container */
@@ -155,8 +192,7 @@ img {
 /*  Services */
 
 .services {
-    background-color: #333;
-    color: #fff;
+    
     padding: 3rem 0 4rem;
 }
 
@@ -184,6 +220,42 @@ img {
 .team img {
     border-radius: 10px;
 }
+
+/* Contact */
+
+.contactme { 
+    padding: 3rem 0 4rem;
+}
+
+.contactme p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin: 2rem 0;
+}
+
+.contactme input,
+.contactme textarea {
+    border: none;
+    border-bottom: 1px #333 solid;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding-bottom: 1rem;
+}
+
+.contactme textarea {
+    height: 200px;
+}
+
+.contactme input:focus,
+.contactme textarea:focus {
+    outline: 0;
+}
+
+.contactme button {width: 100%}
 
     /* media queries */
     @media(max-width: 768px) {
